@@ -1,0 +1,17 @@
+<h1>Without Events</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="client in clients">
+            <td>{{ client.id }}</td>
+            <td>{{ client.name }}</td>
+            <td>{{ client.email }}</td>
+        </tr>
+    </tbody>
+</table>

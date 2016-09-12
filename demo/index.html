@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="ngEvents.demo">
+<head>
+    <meta charset="utf-8" />
+    <title>Angular Events</title>
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i" />
+    <link rel="stylesheet" type="text/css" href="demo/styles/demo.style.css" />
+</head>
+<body ng-controller="mainController as mainController">
+    <aside id="sidebar">
+        <p><a ui-sref="home">ngEvents</a></p>
+        <nav>
+            <ul>
+                <li><a ui-sref="without">Withouth</a></li>
+                <li><a ui-sref="with">With</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <section id="main" ui-view></section>
+
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="node_modules/js-data/dist/js-data.min.js"></script>
+    <script type="text/javascript" src="node_modules/js-data-angular/dist/js-data-angular.min.js"></script>
+    <script type="text/javascript" src="demo/demo.app.js"></script>f
+    <script type="text/javascript" src="demo/services/clients.service.js"></script>
+    <script type="text/javascript" src="demo/controllers/home.controller.js"></script>
+    <script type="text/javascript" src="demo/controllers/without.controller.js"></script>
+    <script type="text/javascript" src="demo/controllers/with.controller.js"></script>
+
+    <script type="text/javascript" src="src/angular-events.module.js"></script>
+    <script type="text/javascript" src="src/directives/if.directive.js"></script>
+</body>
+</html>
