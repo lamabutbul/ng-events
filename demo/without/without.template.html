@@ -1,0 +1,34 @@
+<h1>Without Events</h1>
+<table table>
+    <thead>
+        <tr>
+            <th table-select-all></th>
+            <th>Machine name</th>
+            <th>Group</th>
+            <th>Policy</th>
+            <th>IP address</th>
+            <th>Operating system</th>
+            <th>Architecture</th>
+            <th>Cores</th>
+            <th>Memory</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th table-search="machine_name__like"></th>
+            <th table-search="group__name__like"></th>
+            <th table-search="policy__name__like"></th>
+            <th table-search="ip_address__like"></th>
+            <th table-select-multi="operating_system__in" table-select-options="os.id as os.name for os in withoutController.operatingSystems"></th>
+            <th table-select="architecture" table-select-options="arch.id as arch.name for arch in withoutController.architectures"></th>
+            <th table-slider-range="cores" table-slider-min="1" table-slider-max="32"></th>
+            <th table-slider-range="memory" table-slider-min="1" table-slider-max="256" table-slider-label="GB"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="agent in agents">
+            <td table-select-row="agent.id"></td>
+            <td>{{ client.name }}</td>
+            <td>{{ client.email }}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,13 +1,14 @@
 'use strict';
 
-angular.module('ngEvents.demo').controller('withoutController', ['$scope', 'clientsService', function($scope, clientsService){
-    $scope.clients = null;
+angular.module('ngEvents.demo').controller('withoutController', ['$scope', 'agentsService', function($scope, agentsService){
+    var ctrl = this;
+    ctrl.agents = null;
 
     // private
     var unbind = null;
 
     function findAll() {
-        return clientsService.findAll();
+        return agentsService.findAll();
     }
 
     function bindAll() {
@@ -15,7 +16,7 @@ angular.module('ngEvents.demo').controller('withoutController', ['$scope', 'clie
             unbind();
             unbind = null;
         }
-        unbind = clientsService.bindAll({}, $scope, 'clients');
+        unbind = agentsService.bindAll({}, $scope, 'withoutController.agents');
     }
 
     // init
