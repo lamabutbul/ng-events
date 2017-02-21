@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ngEvents').directive('ngeIf', ['$compile', '$animate', function($compile, $animate){
+angular.module('ngEvents').directive('ngeIf', ['$compile', '$animate', function ngeIfDirective($compile, $animate){
     function getBlockNodes(nodes) {
         var node = nodes[0];
         var endNode = nodes[nodes.length - 1];
@@ -30,7 +30,7 @@ angular.module('ngEvents').directive('ngeIf', ['$compile', '$animate', function(
             $scope.$watch($attr.ngeIf, function ngeIfWatchAction(value) {
                 if (value) {
                     if (!childScope) {
-                        $transclude(function(clone, newScope) {
+                        $transclude(function ngeIfTransclude(clone, newScope) {
                             childScope = newScope;
                             clone[clone.length++] = $compile.$$createComment('end ngeIf', $attr.ngeIf);
                             block = {

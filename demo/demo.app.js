@@ -19,13 +19,13 @@ angular.module('ngEvents.demo').config(['$urlRouterProvider', '$stateProvider', 
         })
         .state('without', {
             url: '/without',
-            templateUrl: 'demo/templates/without.template.html',
+            templateUrl: 'demo/without/without.template.html',
             controller: 'withoutController',
             controllerAs: 'withoutController',
         })
         .state('with', {
             url: '/with',
-            templateUrl: 'demo/templates/with.template.html',
+            templateUrl: 'demo/with/with.template.html',
             controller: 'withController',
             controllerAs: 'withController',
         })

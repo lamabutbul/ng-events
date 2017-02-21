@@ -1,5 +1,5 @@
 {
-    "clients": [
+    "agents": [
         {
             "id": "1",
             "first_name": "John",
